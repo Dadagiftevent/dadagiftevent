@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dadà Gift & Event | Bomboniere, Oggettistica e Allestimenti</title>
+    <!-- Google Fonts per un look elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #faf8f5;
+            --card-bg: #ffffff;
+            --text-color: #2c2c2c;
+            --accent-color: #c5a059; /* Un tocco color oro elegante */
+            --soft-accent: #f4efe6;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* HEADER / HERO */
+        header {
+            background-color: var(--card-bg);
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--soft-accent);
+        }
+
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p.subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* CONTAINER GENERALE */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        /* SEZIONE INTRODUTTIVA */
+        .intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .intro h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .intro p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        /* SEZIONE SERVIZI / VETRINA */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            border: 1px solid rgba(197, 160, 89, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        .service-icon {
+            background-color: var(--soft-accent);
+            color: var(--accent-color);
+            font-size: 2rem;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        .service-content {
+            padding: 2rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-content p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* SEZIONE CONTATTI & SOCIAL */
+        .contact-section {
+            background-color: var(--soft-accent);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .btn-facebook {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #1877f2;
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
+        }
+
+        .btn-facebook:hover {
+            background-color: #145dbf;
+            transform: scale(1.03);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            background-color: var(--card-bg);
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--soft-accent);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- INTESTAZIONE CON LOGO -->
+    <header>
+        <div class="logo-container">
+            <!-- Sostituisci "logo.png" con il nome esatto del file del tuo logo -->
+            <img src="logo.png" alt="Dadà Gift & Event Logo">
+        </div>
+        <p class="subtitle">Bomboniere • Oggettistica • Allestimenti Eventi</p>
+    </header>
+
+    <!-- CORPO PRINCIPALE -->
+    <main class="container">
+        
+        <!-- INTRODUZIONE -->
+        <section class="intro">
+            <h2>Benvenuti nel nostro mondo</h2>
+            <p>Rendiamo unici i tuoi momenti speciali e la tua casa con idee regalo ricercate, bomboniere artigianali e allestimenti curati nei minimi dettagli.</p>
+        </section>
+
+        <!-- GRIGLIA SERVIZI / VETRINA -->
+        <div class="services-grid">
+            
+            <!-- Card 1: Bomboniere -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-gift"></i>
+                </div>
+                <div class="service-content">
+                    <div>
+                        <h3>Bomboniere</h3>
+                        <p>Creazioni uniche e raffinate per battesimi, comunioni, cresime, matrimoni e ogni tua ricorrenza importante, pensate per lasciare un ricordo indimenticabile.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Oggettistica -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <div class="service-content">
+                    <div>
+                        <h3>Oggettistica</h3>
+                        <p>Complementi d'arredo, idee regalo originali e oggettistica di stile per dare un tocco di calore e personalità alla tua casa o per fare un regalo speciale.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Allestimenti Eventi -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="service-content">
+                    <div>
+                        <h3>Allestimenti Eventi</h3>
+                        <p>Progettiamo e realizziamo allestimenti scenografici e curati per feste, compleanni ed eventi, trasformando ogni spazio nella cornice perfetta dei tuoi sogni.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SEZIONE CONTATTI -->
+        <section class="contact-section">
+            <h2>Seguici e Contattaci</h2>
+            <p>Vuoi richiedere un preventivo personalizzato o avere maggiori informazioni sui nostri prodotti? Visita la nostra pagina ufficiale Facebook!</p>
+            <a href="https://www.facebook.com/profile.php?id=61582114335059" target="_blank" class="btn-facebook">
+                <i class="fa-brands fa-facebook-f"></i> Visita la Pagina Facebook
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Dadà Gift & Event. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
