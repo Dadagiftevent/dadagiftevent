@@ -142,41 +142,119 @@
             margin-bottom: 1.5rem;
         }
 
-        /* SEZIONE CONTATTI & SOCIAL */
+        /* SEZIONE CONTATTI E MAPPA */
         .contact-section {
-            background-color: var(--soft-accent);
+            background-color: var(--card-bg);
             border-radius: 16px;
             padding: 3rem 2rem;
             text-align: center;
             margin-top: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(197, 160, 89, 0.1);
         }
 
         .contact-section h2 {
             font-size: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
-        .contact-section p {
-            color: #555;
+        .contact-info {
             margin-bottom: 2rem;
+            color: #555;
+            font-size: 1.05rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: center;
         }
 
-        .btn-facebook {
-            display: inline-flex;
+        .contact-info p {
+            display: flex;
             align-items: center;
             gap: 10px;
-            background-color: #1877f2;
-            color: white;
-            padding: 0.9rem 2rem;
+        }
+
+        .contact-info i {
+            color: var(--accent-color);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 350px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid #ddd;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .buttons-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.8rem 1.5rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.95rem;
             transition: var(--transition);
+        }
+
+        .btn-maps {
+            background-color: #34a853;
+            color: white;
+            box-shadow: 0 4px 15px rgba(52, 168, 83, 0.3);
+        }
+
+        .btn-maps:hover {
+            background-color: #2b8c44;
+            transform: scale(1.03);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebe57;
+            transform: scale(1.03);
+        }
+
+        .btn-facebook {
+            background-color: #1877f2;
+            color: white;
             box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
         }
 
         .btn-facebook:hover {
             background-color: #145dbf;
+            transform: scale(1.03);
+        }
+
+        .btn-instagram {
+            background: linear-num(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #df497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            background-color: #e1306c; /* Colore solido di riserva */
+            color: white;
+            box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
+        }
+
+        .btn-instagram:hover {
+            opacity: 0.9;
             transform: scale(1.03);
         }
 
@@ -206,8 +284,7 @@
     <!-- INTESTAZIONE CON LOGO -->
     <header>
         <div class="logo-container">
-            <!-- Sostituisci "logo.png" con il nome esatto del file del tuo logo -->
-            <img src="logo.png" alt="Dadà Gift & Event Logo">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQMAAABmvDolAAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAFBJREFUeJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgaA28AAQFXU3wAAAAASUVORK5CYII=" alt="Dadà Gift & Event Logo">
         </div>
         <p class="subtitle">Bomboniere • Oggettistica • Allestimenti Eventi</p>
     </header>
@@ -265,13 +342,37 @@
 
         </div>
 
-        <!-- SEZIONE CONTATTI -->
+        <!-- SEZIONE CONTATTI E MAPPA -->
         <section class="contact-section">
-            <h2>Seguici e Contattaci</h2>
-            <p>Vuoi richiedere un preventivo personalizzato o avere maggiori informazioni sui nostri prodotti? Visita la nostra pagina ufficiale Facebook!</p>
-            <a href="https://www.facebook.com/profile.php?id=61582114335059" target="_blank" class="btn-facebook">
-                <i class="fa-brands fa-facebook-f"></i> Visita la Pagina Facebook
-            </a>
+            <h2>Vieni a trovarci e Contattaci</h2>
+            
+            <div class="contact-info">
+                <p><i class="fa-solid fa-location-dot"></i> Via Francesco Spirito, 141/145, 84095 Giffoni Valle Piana (SA)</p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+393505237323" style="color: inherit; text-decoration: none;">350 5237323</a></p>
+            </div>
+
+            <!-- Mappa incorporata di Google Maps -->
+            <div class="map-container">
+                <!-- Sostituisci l'attributo src con l'iframe ufficiale preso da Google Maps se vuoi la mappa esatta del negozio -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.266409046412!2d14.934818376438805!3d40.71215143760567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bd90aac4ef6eb%3A0xb17437b80ae52457!2sDad%C3%A0%20Gift%20%26%20Event!5e0!3m2!1sit!2sit!4v1789379573266!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+            <p style="margin-bottom: 1.5rem; color: #666;">Scegli il modo più comodo per metterti in contatto con noi o raggiungerci:</p>
+            
+            <div class="buttons-group">
+                <a href="https://wa.me/393505237323" target="_blank" class="btn btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://maps.app.goo.gl/FgCLpfTPGEt9oR6AA" target="_blank" class="btn btn-maps">
+                    <i class="fa-solid fa-diamond-turn-right"></i> Mappa
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61582114335059" target="_blank" class="btn btn-facebook">
+                    <i class="fa-brands fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/dada.gift.event/" target="_blank" class="btn btn-instagram">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </div>
         </section>
 
     </main>
