@@ -178,6 +178,55 @@
             color: var(--accent-color);
         }
 
+        /* TABELLA ORARI */
+        .hours-container {
+            max-width: 450px;
+            margin: 0 auto 2.5rem auto;
+            background-color: var(--soft-accent);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        .hours-container h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #2c2c2c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+        }
+
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .hours-table td {
+            padding: 8px 5px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .hours-table td.day {
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .hours-table td.time {
+            text-align: right;
+        }
+
         .map-container {
             width: 100%;
             height: 350px;
@@ -246,9 +295,7 @@
         }
 
         .btn-instagram {
-            background: linear-num(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #df497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-            background-color: #e1306c; /* Colore solido di riserva */
+            background-color: #e1306c;
             color: white;
             box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
         }
@@ -322,7 +369,7 @@
                 <div class="service-content">
                     <div>
                         <h3>Oggettistica</h3>
-                        <p>Complementi d'arredo, idee regalo originali e oggettistica di stile per dare un tocco di calore e personalità alla tua casa o per fare un regalo speciale.</p>
+                        <p>Complementi d'arredo, idee regalo originali e oggettistica di stile per dare un tondo di calore e personalità alla tua casa o per fare un regalo speciale.</p>
                     </div>
                 </div>
             </div>
@@ -351,9 +398,43 @@
                 <p><i class="fa-solid fa-phone"></i> <a href="tel:+393505237323" style="color: inherit; text-decoration: none;">350 5237323</a></p>
             </div>
 
+            <!-- ORARI DI APERTURA -->
+            <div class="hours-container">
+                <h3><i class="fa-regular fa-clock"></i> Orari di Apertura</h3>
+                <table class="hours-table">
+                    <tr>
+                        <td class="day">Lunedì</td>
+                        <td class="time">09:00 - 13:00<br>17:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td class="day">Martedì</td>
+                        <td class="time">09:00 - 13:00<br>17:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td class="day">Mercoledì</td>
+                        <td class="time">09:00 - 13:00<br>17:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td class="day">Giovedì</td>
+                        <td class="time">09:00 - 13:00</td>
+                    </tr>
+                    <tr>
+                        <td class="day">Venerdì</td>
+                        <td class="time">09:00 - 13:00<br>17:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td class="day">Sabato</td>
+                        <td class="time">09:00 - 13:00<br>17:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td class="day" style="color: #b33939;">Domenica</td>
+                        <td class="time" style="color: #b33939; font-weight: 500;">Chiuso</td>
+                    </tr>
+                </table>
+            </div>
+
             <!-- Mappa incorporata di Google Maps -->
             <div class="map-container">
-                <!-- Sostituisci l'attributo src con l'iframe ufficiale preso da Google Maps se vuoi la mappa esatta del negozio -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.266409046412!2d14.934818376438805!3d40.71215143760567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bd90aac4ef6eb%3A0xb17437b80ae52457!2sDad%C3%A0%20Gift%20%26%20Event!5e0!3m2!1sit!2sit!4v1789379573266!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
 
